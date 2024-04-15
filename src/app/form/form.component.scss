@@ -1,9 +1,16 @@
+
 .q2container {
-    
-    display: flex; /* or inline-flex */
-    flex-direction: row;
-    justify-content: center;   /* horizontally */
-    align-items: center;   /* verically */
-    gap: 50px;   /* only between items */
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+    align-items:flex-start;
+    gap: 25px;
+
+}
   
+.form-field {
+    display: flex;
+    flex-direction:row;
+    gap: 10px;
 }

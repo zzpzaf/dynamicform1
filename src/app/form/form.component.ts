@@ -11,6 +11,12 @@ const ItemsFormFields = [
 
   },
   {
+    controlType: 'input',
+    controlName: 'itemId',
+    fieldLabel: 'Item Id:',
+    inputType: 'number',
+  },
+  {
     controlType: 'button',
     controlName: 'submitButton',
     fieldLabel: 'Submit:',
