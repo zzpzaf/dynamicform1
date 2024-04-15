@@ -8,6 +8,7 @@
     "itemCrUUID": "0b1c4ea9-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": true,
     "categoryNames": ["Notebooks"]
   },
   {
@@ -19,6 +20,7 @@
     "itemCrUUID": "0b1c6409-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": true,
     "categoryNames": ["Books"]
   },
   {
@@ -30,7 +32,8 @@
     "itemCrUUID": "0b1c7537-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
-    "categoryNames": ["Penses"]
+    "isItemEnabled": true,
+    "categoryNames": ["Penses", "Notebooks"]
   },
   {
     "itemId": 4,
@@ -41,6 +44,7 @@
     "itemCrUUID": "0b1c8cb6-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": false,
     "categoryNames": ["Penses"]
   },
   {
@@ -52,6 +56,7 @@
     "itemCrUUID": "0b1ca6f5-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": false,
     "categoryNames": ["Penses"]
   },
   {
@@ -63,6 +68,7 @@
     "itemCrUUID": "0b1cbda3-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": true,
     "categoryNames": ["Books"]
   },
   {
@@ -74,6 +80,7 @@
     "itemCrUUID": "0b1cd7ac-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": false,
     "categoryNames": ["Books"]
   },
   {
@@ -85,6 +92,7 @@
     "itemCrUUID": "0b1cf590-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": true,
     "categoryNames": ["Penses"]
   },
   {
@@ -96,6 +104,7 @@
     "itemCrUUID": "0b1d07e9-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": true,
     "categoryNames": ["Notebooks"]
   },
   {
@@ -107,6 +116,7 @@
     "itemCrUUID": "0b1d17e5-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": false,
     "categoryNames": ["Pencils"]
   },
   {
@@ -118,6 +128,7 @@
     "itemCrUUID": "0b1d27e8-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": true,
     "categoryNames": ["Penses"]
   },
   {
@@ -129,6 +140,7 @@
     "itemCrUUID": "0b1d3821-c0d3-11ee-bd4e-0242ac110002",
     "itemCrTimestamp": "2024-02-01 07:25:20",
     "itemClientUUID": null,
+    "isItemEnabled": false,
     "categoryNames": ["Pencils"]
   }
 ]

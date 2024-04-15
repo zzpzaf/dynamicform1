@@ -9,5 +9,6 @@ export interface IItem {
     itemCrUUID: string;
     itemCrTimestamp: Date;
     itemClientUUID: string;
+    isItemEnabled: boolean;
     categoryNames: string[];
 }

@@ -7,7 +7,7 @@
             <div *ngSwitchCase="'input'">
                 <div class = "form-field">
                     <label>{{field.fieldLabel}}</label>
-                    <input [formControlName]="field.controlName" [id]="field.controlName" [type]="field.inputType" >
+                    <input [formControlName]="field.controlName" [id]="field.controlName" [type]="field.inputType" [checked]="field.initialValue === true" >
                 </div>
             </div>
             

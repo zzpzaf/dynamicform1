@@ -52,7 +52,8 @@ export class FormComponent implements OnInit{
   initializeForm(): void {
     const fbGroup = this.formBuilder.group({});
     this.formFields.forEach((field) => {
-      fbGroup.addControl(field.controlName, new FormControl(""));
+      // fbGroup.addControl(field.controlName, new FormControl(""));
+      fbGroup.addControl(field.controlName, new FormControl((field.initialValue !== undefined &&  field.initialValue !== null) ? field.initialValue : ''));
     });
     this.dynFormGroup = fbGroup;
   }
