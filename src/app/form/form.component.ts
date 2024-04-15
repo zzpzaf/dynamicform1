@@ -78,30 +78,50 @@ export class FormComponent implements OnInit{
   //   });
   // }
 
+
   updateFormFieldsInitialValues(item: IItem): void {
     this.formFields.forEach((field) => {
       const dataField = field.dataField;
       if (dataField !== undefined && item.hasOwnProperty(dataField)) {
         
         if (field.options) {
-          let initValKeys: any[] = [];
-          item.categoryNames.forEach((category: string) => {
-          field.options!.forEach((option: IFormOptions) => {
-              if (option.optionValue === category) {
-                option.isOptionSelected = true;
-                initValKeys.push(option.optionKey);
-              }
-            });
-          });
-          field.initialValue = initValKeys;
-          // console.log('>===>> updateFormFieldsInitialValues() - field.initialValue', field.initialValue);
+            let initValKeys: any[] = [];
+            if (field.controlType === 'select' && field.controlName === 'itemCategories') {
+                item.categoryNames.forEach((category: string) => {
+                field.options!.forEach((option: IFormOptions) => {
+                    if (option.optionValue === category) {
+                        option.isOptionSelected = true;
+                        initValKeys.push(option.optionKey);
+                    }
+                  });
+                });
+            } else if (field.inputType === 'radio') {
+                // console.log('>===>> updateFormFieldsInitialValues() - Item Id: ', item.itemId, 'Item Status: ', item.itemStatusId );
+                field.options!.forEach((option: IFormOptions) => {
+                    if (option.optionKey === item.itemStatusId) {
+                        option.isOptionSelected = true;
+                    } else {
+                        option.isOptionSelected = false;
+                    }
+                    // console.log('>===>> updateFormFieldsInitialValues() - option.optionKey: ', option.optionKey, 'option.optionValue: ', option.optionValue, 'option.isOptionSelected: ', option.isOptionSelected);    
+                });
+            }
+            field.initialValue = initValKeys;     
+            // console.log('>===>> updateFormFieldsInitialValues() - field.initialValue', field.initialValue);
+        
         } else {
-          field.initialValue = item[dataField];
+            field.initialValue = item[dataField];
+            if (field.inputType === 'checkbox') {
+              // field.initialValue = true;
+              console.log('>===>> updateFormFieldsInitialValues() - field.initialValue', field.initialValue);
+            }
         }
 
       }
     });
   }
+
+
 
 
   updateOptions(cotrolName: string) {
