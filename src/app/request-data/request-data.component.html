@@ -1,0 +1,10 @@
+<div class="backcolor">
+    <form [formGroup]="demoFormGroup" (ngSubmit)="onFormSubmit($event)" class="q1container">
+        {{input1Label}}:
+        <input type="number" matInput placeholder={{input1Placeholder}} formControlName={{input1ControlNane}} >
+        <button mat-raised-button type="submit" color="accent" > {{submitButtomText}} </button>
+    </form>
+    <hr />
+</div>
+   
+
