@@ -4,6 +4,9 @@ import { ItemsFormFields } from '../dataObjects/itemFormFields';
 import { DataChangeService } from '../data-change.service';
 import { Subscription } from 'rxjs';
 import { IItem } from '../dataObjects/iitem';
+import { DataService } from '../data.service';
+import { ICategory } from '../dataObjects/icatecory';
+import { IFormOptions } from '../dataObjects/IFormField';
 
 
 
@@ -18,6 +21,7 @@ export class FormComponent implements OnInit{
   constructor( 
     private formBuilder: FormBuilder, 
     private changeService: DataChangeService,
+    private dataServise: DataService, 
    ) { } 
   
   private itemChangeSubscription!: Subscription ;
@@ -37,6 +41,8 @@ export class FormComponent implements OnInit{
         console.log(">===>> formComponent -  ngOnInit() - "  + error + ' - Error getting Updated item from changeService.');
       }
     });
+
+    this.updateOptions('itemCategories');
 
     this.initializeForm();
     this.setFormControlValues();
@@ -70,6 +76,27 @@ export class FormComponent implements OnInit{
       }
     });
   }
+
+
+
+  updateOptions(cotrolName: string) {
+    this.dataServise.getCategories().subscribe((categories: ICategory[]) => {
+      //console.log('>===>> updateItem() - categories', categories);
+      let options: IFormOptions[] = [];
+      categories.forEach((category: ICategory) => {
+        options.push({optionKey: category.categoryId, optionValue: category.categoryName});
+      });
+      this.formFields.forEach((field) => {
+        if( field.controlName === cotrolName && field.controlType === 'select') {
+          field.options = options;
+        }
+      });
+
+      this.changeService.setCategories(categories);
+    });
+  }
+
+
 
 
   onFormSubmit(event: Event): void {

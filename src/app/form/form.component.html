@@ -11,6 +11,15 @@
                 </div>
             </div>
             
+            <div *ngSwitchCase="'select'">
+                <div class="form-field">
+                    <label>{{field.fieldLabel}}</label>
+                    <select [formControlName]="field.controlName" [id]="field.controlName">
+                        <option *ngFor="let opt of field.options" [value]="opt.optionKey">{{opt.optionValue}}</option>
+                    </select>
+                </div>
+            </div>   
+
             <div *ngSwitchCase="'button'">
                 <div class="form-field">
                     <button ngDefaultControl [formControlName]="field.controlName" [id]="field.controlName" [type]="field.inputType">{{field.fieldLabel}}</button>

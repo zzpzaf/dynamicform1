@@ -1,6 +1,6 @@
-import { iformField } from "./IFormField";
+import { IFormField } from "./IFormField";
 
-export const ItemsFormFields: iformField[] = [
+export const ItemsFormFields: IFormField[] = [
 
         {
           dataField: 'itemName',
@@ -17,6 +17,15 @@ export const ItemsFormFields: iformField[] = [
           fieldLabel: 'Item Id:',
           inputType: 'number',
           // initialValue: 0,
+
+        },
+        {
+          dataField: 'categoryNames',
+          controlType: 'select',
+          controlName: 'itemCategories',
+          fieldLabel: 'Categories:',
+          inputType: 'number',
+          options: [],
         },
         {
           controlType: 'button',
@@ -24,5 +33,6 @@ export const ItemsFormFields: iformField[] = [
           fieldLabel: 'Submit:',
           inputType: 'submit',
         },
+      
       
 ]
