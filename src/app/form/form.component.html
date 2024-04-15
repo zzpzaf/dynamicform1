@@ -1,0 +1,29 @@
+<!-- <p>form works!</p> -->
+
+
+<form class = 'q2container' [formGroup]="dynFormGroup" (ngSubmit)="onFormSubmit($event)">
+
+    <div *ngFor="let field of formFields">
+
+        <div [ngSwitch]="field.controlType">
+
+            <div *ngSwitchCase="'input'">
+                <div class = 'q2container'>
+                    <label>{{field.fieldLabel}}</label>
+                    <input [formControlName]="field.controlName" [id]="field.controlName" [type]="field.inputType" >
+                </div>
+            </div>
+            
+            <div *ngSwitchCase="'button'">
+                <div >
+                    <button [formControlName]="field.controlName" [id]="field.controlName" [type]="field.inputType">{{field.fieldLabel}}</button>
+                </div>    
+            </div>    
+
+        </div>
+
+</div>  
+
+</form>
+
+<hr />

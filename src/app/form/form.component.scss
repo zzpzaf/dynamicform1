@@ -1,0 +1,9 @@
+.q2container {
+    
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    justify-content: center;   /* horizontally */
+    align-items: center;   /* verically */
+    gap: 50px;   /* only between items */
+  
+}

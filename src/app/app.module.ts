@@ -9,10 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HomeComponent } from './home/home.component';
 import { RequestDataComponent } from './request-data/request-data.component';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, RequestDataComponent],
+  declarations: [AppComponent, HomeComponent, RequestDataComponent, FormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
