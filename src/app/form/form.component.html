@@ -13,9 +13,9 @@
             
             <div *ngSwitchCase="'button'">
                 <div class="form-field">
-                    <button [formControlName]="field.controlName" [id]="field.controlName" [type]="field.inputType">{{field.fieldLabel}}</button>
+                    <button ngDefaultControl [formControlName]="field.controlName" [id]="field.controlName" [type]="field.inputType">{{field.fieldLabel}}</button>
                 </div>    
-            </div>    
+            </div>     
 
         </div>
 
