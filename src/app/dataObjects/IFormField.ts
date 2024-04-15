@@ -14,7 +14,8 @@ export interface IFormField {
     controlType: string;
     fieldLabel: string;
     inputType?: string;
-    initialValue?: any;
+    initialValue?: any | any[];
     options?: IFormOptions[];
-
+    multipleOptions?: boolean;
+    promptText?: string;
 }

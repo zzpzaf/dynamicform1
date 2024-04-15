@@ -14,11 +14,12 @@
             <div *ngSwitchCase="'select'">
                 <div class="form-field">
                     <label>{{field.fieldLabel}}</label>
-                    <select [formControlName]="field.controlName" [id]="field.controlName">
-                        <option *ngFor="let opt of field.options" [value]="opt.optionKey">{{opt.optionValue}}</option>
+                    <select [formControlName]="field.controlName" [id]="field.controlName" [multiple]="field['multipleOptions']" >
+                        <option [ngValue]="null" disabled> {{field['promptText']}} </option>
+                        <option *ngFor="let opt of field.options" [ngValue]="opt.optionKey">{{opt.optionValue}}</option>
                     </select>
                 </div>
-            </div>   
+            </div>    
 
             <div *ngSwitchCase="'button'">
                 <div class="form-field">

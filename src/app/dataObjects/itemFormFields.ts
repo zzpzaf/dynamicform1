@@ -26,6 +26,8 @@ export const ItemsFormFields: IFormField[] = [
           fieldLabel: 'Categories:',
           inputType: 'number',
           options: [],
+          multipleOptions: true,
+          promptText: 'Select at least one',
         },
         {
           controlType: 'button',

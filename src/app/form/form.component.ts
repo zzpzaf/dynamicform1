@@ -68,15 +68,39 @@ export class FormComponent implements OnInit{
     }
   }
 
+  // updateFormFieldsInitialValues(item: IItem): void {
+  //   this.formFields.forEach((field) => {
+  //     const dataField = field.dataField;
+  //     if (dataField !== undefined && item.hasOwnProperty(dataField)) {
+  //       field.initialValue = item[dataField];
+  //     }
+  //   });
+  // }
+
   updateFormFieldsInitialValues(item: IItem): void {
     this.formFields.forEach((field) => {
       const dataField = field.dataField;
       if (dataField !== undefined && item.hasOwnProperty(dataField)) {
-        field.initialValue = item[dataField];
+        
+        if (field.options) {
+          let initValKeys: any[] = [];
+          item.categoryNames.forEach((category: string) => {
+          field.options!.forEach((option: IFormOptions) => {
+              if (option.optionValue === category) {
+                option.isOptionSelected = true;
+                initValKeys.push(option.optionKey);
+              }
+            });
+          });
+          field.initialValue = initValKeys;
+          // console.log('>===>> updateFormFieldsInitialValues() - field.initialValue', field.initialValue);
+        } else {
+          field.initialValue = item[dataField];
+        }
+
       }
     });
   }
-
 
 
   updateOptions(cotrolName: string) {
