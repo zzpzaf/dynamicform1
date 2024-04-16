@@ -19,6 +19,13 @@ export const ItemsFormFields: IFormField[] = [
           initialValue: 999,
         },
         {
+          dataField: 'itemCrTimestamp',
+          controlType: 'input',
+          controlName: 'itemCreatedTimestamp',
+          fieldLabel: 'Date/Time: ',
+          inputType: 'datetime-local',
+        },
+        {
           dataField: 'categoryNames',
           controlType: 'select',
           controlName: 'itemCategories',
