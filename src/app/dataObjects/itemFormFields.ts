@@ -2,6 +2,16 @@ import { IFormField } from "./IFormField";
 
 export const ItemsFormFields: IFormField[] = [
 
+
+        {
+          dataField: 'itemId',
+          controlType: 'input',
+          controlName: 'itemId',
+          fieldLabel: 'Item Id:',
+          inputType: 'number',
+          readOnly: true,
+
+        },
         {
           dataField: 'itemName',
           controlType: 'input',
@@ -11,12 +21,22 @@ export const ItemsFormFields: IFormField[] = [
           // initialValue: '',
         },
         {
-          dataField: 'itemId',
+          dataField: 'itemDescription',
           controlType: 'input',
-          controlName: 'itemId',
-          fieldLabel: 'Item Id:',
+          controlName: 'itemDescription',
+          fieldLabel: 'Item Description:',
+          inputType: 'text',
+          // initialValue: '',
+        },
+        {
+          dataField: 'itemModelYear',
+          controlType: 'input',
+          controlName: 'itemModelYear',
+          fieldLabel: 'Model Year:',
           inputType: 'number',
-          initialValue: 999,
+          minValue: 2005,
+          maxValue: 2030,
+          // initialValue: 999,
         },
         {
           dataField: 'itemCrTimestamp',
@@ -33,6 +53,7 @@ export const ItemsFormFields: IFormField[] = [
           inputType: 'number',
           options: [],
           multipleOptions: true,
+          optionsSize: 6,
           promptText: 'Select at least one',
         },
         {

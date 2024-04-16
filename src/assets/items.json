@@ -2,11 +2,11 @@
   {
     "itemId": 1,
     "itemName": "Wooden Pencil",
-    "itemDescription": null,
+    "itemDescription": "A wooden pencil with eraser.",
     "itemModelYear": 1998,
     "itemStatusId": 1,
     "itemCrUUID": "0b1c4ea9-c0d3-11ee-bd4e-0242ac110002",
-    "itemCrTimestamp": "2024-02-01 07:25:20",
+    "itemCrTimestamp": "2022-02-01 07:25:20",
     "itemClientUUID": null,
     "isItemEnabled": true,
     "categoryNames": ["Notebooks"]
@@ -18,7 +18,7 @@
     "itemModelYear": 2005,
     "itemStatusId": 2,
     "itemCrUUID": "0b1c6409-c0d3-11ee-bd4e-0242ac110002",
-    "itemCrTimestamp": "2024-02-01 07:25:20",
+    "itemCrTimestamp": "2023-12-03 11:25:20",
     "itemClientUUID": null,
     "isItemEnabled": true,
     "categoryNames": ["Books"]
@@ -26,11 +26,11 @@
   {
     "itemId": 3,
     "itemName": "Silica Eraser",
-    "itemDescription": null,
+    "itemDescription": "Colorfull big eraser",
     "itemModelYear": 2007,
     "itemStatusId": 1,
     "itemCrUUID": "0b1c7537-c0d3-11ee-bd4e-0242ac110002",
-    "itemCrTimestamp": "2024-02-01 07:25:20",
+    "itemCrTimestamp": "2024-02-01 03:25:20",
     "itemClientUUID": null,
     "isItemEnabled": true,
     "categoryNames": ["Penses", "Notebooks"]
@@ -42,7 +42,7 @@
     "itemModelYear": 2020,
     "itemStatusId": 1,
     "itemCrUUID": "0b1c8cb6-c0d3-11ee-bd4e-0242ac110002",
-    "itemCrTimestamp": "2024-02-01 07:25:20",
+    "itemCrTimestamp": "2024-02-01 09:25:20",
     "itemClientUUID": null,
     "isItemEnabled": false,
     "categoryNames": ["Penses"]
@@ -54,7 +54,7 @@
     "itemModelYear": 2019,
     "itemStatusId": 3,
     "itemCrUUID": "0b1ca6f5-c0d3-11ee-bd4e-0242ac110002",
-    "itemCrTimestamp": "2024-02-01 07:25:20",
+    "itemCrTimestamp": "2022-04-09 11:25:20",
     "itemClientUUID": null,
     "isItemEnabled": false,
     "categoryNames": ["Penses"]
@@ -66,7 +66,7 @@
     "itemModelYear": 2019,
     "itemStatusId": 1,
     "itemCrUUID": "0b1cbda3-c0d3-11ee-bd4e-0242ac110002",
-    "itemCrTimestamp": "2024-02-01 07:25:20",
+    "itemCrTimestamp": "2024-07-11 02:25:20",
     "itemClientUUID": null,
     "isItemEnabled": true,
     "categoryNames": ["Books"]
