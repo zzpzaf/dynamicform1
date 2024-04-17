@@ -93,7 +93,12 @@ export class ItemsFormFieldsService {
 
   private updateRadioOptions(field: IFormField, key: any): any[] | undefined {
     field.options!.forEach((option: IFormOptions) => {
-      if (option.optionKey === key) option.isOptionSelected = true; else option.isOptionSelected = false;
+      if (option.optionKey === key) {
+        option.isOptionSelected = true; 
+        field.initialValue = option.optionKey;
+      } else { 
+        option.isOptionSelected = false;
+      }
     });
     return field.options;
   }

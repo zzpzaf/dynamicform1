@@ -20,6 +20,8 @@ export class FormComponent implements OnInit, OnDestroy {
   public formFields: IFormField[] = [];
   public isFormSubmitted: boolean = false;
 
+  public fornCardTitle: string = 'Dynamic Form with Dynamic Components';
+
   ngOnInit(): void {
     this.formFieldsSubscription = this.formFieldsService
       .getFormFields()

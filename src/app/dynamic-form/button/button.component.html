@@ -1,9 +1,8 @@
 <!-- <p>button works!</p> -->
 
-<div [formGroup]="fGroup">
-
-    <div class="form-field">
-        <button
+<mat-card-footer>
+    <div [formGroup]="fGroup">
+        <button mat-raised-button color="accent"
         ngDefaultControl
         [formControlName]="field.controlName"
         [id]="field.controlName"
@@ -12,5 +11,4 @@
         {{ field.fieldLabel }}
         </button>
     </div>
-
-</div>
+</mat-card-footer>

@@ -1,17 +1,20 @@
 <!-- <p>radio works!</p> -->
 
-<div [formGroup]="fGroup">
-    <div class="form-field">
-        <label>{{ field.fieldLabel }}</label>
-        <label *ngFor="let option of field.options">
-            <input
-            [name]="field.controlName"
-            [type]="field.inputType"
-            [value]="option.optionKey"
-            [formControlName]="field.controlName"
-            [checked]="option.isOptionSelected === true"
-            />
-            {{ option.optionValue }}
-        </label>
-    </div>
-</div>
+<div [formGroup]="fGroup" class="mat-component">
+    <mat-label>{{ field.fieldLabel }}</mat-label>
+    <mat-radio-group 
+        [name]="field.controlName" 
+        [value]="field.initialValue"
+      >
+      <mat-radio-button
+        color="primary"
+        *ngFor="let option of field.options"
+        [formControlName]="field.controlName"
+        [value]="option.optionKey"
+        ngDefaultControl
+      >
+        "{{ option.optionValue }}"
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+  

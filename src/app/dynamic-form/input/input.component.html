@@ -1,15 +1,26 @@
 <!-- <p>input works!</p> -->
 
-<div [formGroup]="fGroup">
-    <div class="form-field">
-      <label>{{ field.fieldLabel }}</label>
-      <input
-        [formControlName]="field.controlName"
-        [id]="field.controlName"
-        [type]="field.inputType"
-        [min]="field.minValue"
-        [max]="field.maxValue"
-        [readOnly]="field.readOnly"
-      />
-    </div>
-</div>
+
+<mat-form-field >
+  <div [formGroup]="fGroup">
+      <!-- <div class="form-field"> -->
+        <!-- <label>{{ field.fieldLabel }}</label> -->
+        <mat-label >
+          {{ field.fieldLabel }}:
+        </mat-label>
+        <input matInput  
+          [placeholder]="field.promptText ?? ''"
+          [formControlName]="field.controlName"
+          [id]="field.controlName"
+          [type]="field.inputType ?? ''"
+          [min]="field.minValue"
+          [max]="field.maxValue"
+          [readonly]="field.readOnly"
+        />
+      <!-- </div> -->
+  </div>
+</mat-form-field>
+
+
+<!-- class="row"
+class="column" -->

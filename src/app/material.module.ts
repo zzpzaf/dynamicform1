@@ -7,6 +7,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -17,6 +21,9 @@ import { CommonModule } from '@angular/common';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSelectModule,
   ],
   exports: [
     MatToolbarModule,
@@ -25,6 +32,9 @@ import { CommonModule } from '@angular/common';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatSelectModule,
   ],
 })
 export class MaterialModule {}

@@ -1,18 +1,29 @@
 
 
-  
- .q2container {
-    max-width: 400px;
+mat-card-content {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     margin: 2em auto;
-    align-items:flex-start;
     gap: 25px;
-
+    justify-content: center;
 }
-  
-.form-field {
+
+mat-form-field {
     display: flex;
-    flex-direction:row;
-    gap: 10px;
+}
+
+mat-card-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mat-component {
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    margin: 2em auto;
+    gap: 25px;
+    align-items: center;
+    justify-content:flex-start ;
 }

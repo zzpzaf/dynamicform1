@@ -89,6 +89,7 @@ export const ItemsFormFields: IFormField[] = [
             {optionKey: 2, optionValue: 'Canceled'},
             {optionKey: 3, optionValue: 'Pending', isOptionSelected: true},
           ],
+          initialValue: 3,
         },
         {
           dataField: 'isItemEnabled',
