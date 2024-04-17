@@ -1,34 +1,15 @@
 <!-- <p>input works!</p> -->
 
 <div [formGroup]="fGroup">
-
-        <ng-template [ngIf]="field.inputType === 'radio'" [ngIfElse]="other">
-          <label *ngFor="let option of field.options">
-            <input
-              [name]="field.controlName"
-              [type]="field.inputType"
-              [value]="option.optionKey"
-              [formControlName]="field.controlName"
-              [checked]="option.isOptionSelected === true"
-            />
-            {{ option.optionValue }}
-          </label>
-        </ng-template>
-
-        <ng-template #other>
-          <div class="form-field">
-            <label>{{ field.fieldLabel }}</label>
-            <input
-              [formControlName]="field.controlName"
-              [id]="field.controlName"
-              [type]="field.inputType"
-              [checked]="field.initialValue === true"
-              [min]="field.minValue"
-              [max]="field.maxValue"
-              [readOnly]="field.readOnly"
-            />
-          </div>
-        </ng-template>
-
-
+    <div class="form-field">
+      <label>{{ field.fieldLabel }}</label>
+      <input
+        [formControlName]="field.controlName"
+        [id]="field.controlName"
+        [type]="field.inputType"
+        [min]="field.minValue"
+        [max]="field.maxValue"
+        [readOnly]="field.readOnly"
+      />
+    </div>
 </div>

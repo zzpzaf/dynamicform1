@@ -1,1 +1,13 @@
-<p>datetime works!</p>
+<!-- <p>datetime works!</p> -->
+
+<div [formGroup]="fGroup">
+    <div class="form-field">
+      <label>{{ field.fieldLabel }}</label>
+      <input
+        [formControlName]="field.controlName"
+        [id]="field.controlName"
+        [type]="field.inputType"
+        [readOnly]="field.readOnly"
+      />
+    </div>
+</div>

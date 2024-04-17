@@ -1,1 +1,17 @@
-<p>radio works!</p>
+<!-- <p>radio works!</p> -->
+
+<div [formGroup]="fGroup">
+    <div class="form-field">
+        <label>{{ field.fieldLabel }}</label>
+        <label *ngFor="let option of field.options">
+            <input
+            [name]="field.controlName"
+            [type]="field.inputType"
+            [value]="option.optionKey"
+            [formControlName]="field.controlName"
+            [checked]="option.isOptionSelected === true"
+            />
+            {{ option.optionValue }}
+        </label>
+    </div>
+</div>
