@@ -1,3 +1,10 @@
+export type dynControlType =
+  | 'button'
+  | 'input'
+  | 'select'
+  | 'checkbox'
+  | 'radio'
+  | 'datetime';
 
 
 export type standardInputType =
@@ -38,7 +45,7 @@ export interface IFormField {
     [key: string]: any;
     dataField?: string;
     controlName: string;
-    controlType: string;
+    controlType: dynControlType;
     fieldLabel: string;
     inputType?: standardInputType;
     readOnly?: boolean;

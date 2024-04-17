@@ -1,0 +1,20 @@
+<!-- <p>select works!</p> -->
+
+<div [formGroup]="fGroup">
+
+    <div class="form-field">
+        <label>{{ field.fieldLabel }}</label>
+        <select
+        [formControlName]="field.controlName"
+        [id]="field.controlName"
+        [multiple]="field.multipleOptions"
+        [size]="field.optionsSize"
+        >
+        <option [ngValue]="null" disabled>{{ field["promptText"] }}</option>
+        <option *ngFor="let opt of field.options" [ngValue]="opt.optionKey">
+            {{ opt.optionValue }}
+        </option>
+        </select>
+    </div>
+
+</div>

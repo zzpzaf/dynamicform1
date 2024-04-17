@@ -9,11 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { HomeComponent } from './home/home.component';
 import { RequestDataComponent } from './request-data/request-data.component';
-import { FormComponent } from './form/form.component';
+import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, RequestDataComponent, FormComponent],
+  declarations: [AppComponent, HomeComponent, RequestDataComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -21,6 +21,7 @@ import { FormComponent } from './form/form.component';
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
+    DynamicFormModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,0 +1,16 @@
+<!-- <p>button works!</p> -->
+
+<div [formGroup]="fGroup">
+
+    <div class="form-field">
+        <button
+        ngDefaultControl
+        [formControlName]="field.controlName"
+        [id]="field.controlName"
+        [type]="field.inputType"
+        >
+        {{ field.fieldLabel }}
+        </button>
+    </div>
+
+</div>

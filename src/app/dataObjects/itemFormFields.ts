@@ -1,5 +1,21 @@
 import { Validators } from "@angular/forms";
-import { IFormField } from "./IFormField";
+import { IFormField, dynControlType } from "./IFormField";
+import { ButtonComponent } from "../dynamic-form/button/button.component";
+import { CheckboxComponent } from "../dynamic-form/checkbox/checkbox.component";
+import { DatetimeComponent } from "../dynamic-form/datetime/datetime.component";
+import { InputComponent } from "../dynamic-form/input/input.component";
+import { RadioComponent } from "../dynamic-form/radio/radio.component";
+import { SelectComponent } from "../dynamic-form/select/select.component";
+
+
+export const dynComponents: { [type in dynControlType]?: any } = {
+  button: ButtonComponent,
+  input: InputComponent,
+  select: SelectComponent,
+  radio: RadioComponent,
+  datetime: DatetimeComponent,
+  checkbox: CheckboxComponent,
+};
 
 export const ItemsFormFields: IFormField[] = [
 

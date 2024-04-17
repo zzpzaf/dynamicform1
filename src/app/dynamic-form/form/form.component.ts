@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { ItemsFormFieldsService } from '../items-form-fields.service';
+import { FormBuilder, FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { ItemsFormFieldsService } from '../../items-form-fields.service';
 import { Subscription } from 'rxjs';
-import { IFormField, IFormFieldValidator } from '../dataObjects/IFormField';
+import { IFormField, IFormFieldValidator } from '../../dataObjects/IFormField';
 
 @Component({
   selector: 'dyn-form',
@@ -19,7 +19,6 @@ export class FormComponent implements OnInit, OnDestroy {
   public dynFormGroup!: FormGroup;
   public formFields: IFormField[] = [];
   public isFormSubmitted: boolean = false;
-
 
   ngOnInit(): void {
     this.formFieldsSubscription = this.formFieldsService
@@ -69,6 +68,7 @@ export class FormComponent implements OnInit, OnDestroy {
     }
   }
 
+
   bindValidators(validators: IFormFieldValidator[]) {
     if (!validators || validators.length <= 0) return [];
     const validatorsList: any[] = [];
@@ -77,6 +77,8 @@ export class FormComponent implements OnInit, OnDestroy {
     });
     return Validators.compose(validatorsList);
   }
+
+
 
   onFormSubmit(event: Event): void {
     this.isFormSubmitted = true;
