@@ -18,12 +18,14 @@ mat-card-footer {
     justify-content: flex-end;
 }
 
-.mat-component {
-    max-width: 500px;
+.mat-component, .mat-dtpicker {
     display: flex;
     flex-direction: row;
-    margin: 2em auto;
     gap: 25px;
     align-items: center;
     justify-content:flex-start ;
+}
+
+.mat-component {
+    margin: 2em auto;
 }

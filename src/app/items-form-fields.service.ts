@@ -71,6 +71,7 @@ export class ItemsFormFieldsService {
       if (field.options && field.inputType === 'radio')
         field.options = this.updateRadioOptions(field, item.itemStatusId);
       if (!field.options) field.initialValue = item[dataField];
+      if (field.controlType === 'datetime') field.initialValue = this.dateTimeString(item[dataField]); 
       this.formFields$$.next(this.formFields);
     });
   }
@@ -102,4 +103,11 @@ export class ItemsFormFieldsService {
     });
     return field.options;
   }
+
+  private dateTimeString(dt: Date): string {  
+    // const dtStr = formatDate(dt, 'yyyy-MM-ddTHH:mm:ss.SSS', 'en-US')+"Z";
+    const dtStr = new Date(dt).toISOString();
+    return dtStr;
+  }
+
 }
