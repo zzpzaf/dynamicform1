@@ -65,6 +65,30 @@
         </div>
       </div>
     </div>
+    <!--  -->
+    <div
+      *ngIf="
+        (dynFormGroup.controls[field['controlName']].touched ||
+          isFormSubmitted) &&
+        dynFormGroup.controls[field['controlName']].errors
+      "
+    >
+      <!-- This Field has errors. -->
+      <ng-container *ngFor="let validation of field['validators']">
+        <div
+          *ngIf="
+            dynFormGroup.controls[field['controlName']].errors![
+              validation.validatorName
+            ]
+          "
+        >
+          <span style="color: red; font-size: x-small">
+            {{ validation.validatorErrorMessage }}
+          </span>
+        </div>
+      </ng-container>
+    </div>
+    <!--  -->
   </div>
 </form>
 

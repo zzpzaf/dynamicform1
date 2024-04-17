@@ -1,3 +1,4 @@
+import { Validators } from "@angular/forms";
 import { IFormField } from "./IFormField";
 
 export const ItemsFormFields: IFormField[] = [
@@ -18,7 +19,10 @@ export const ItemsFormFields: IFormField[] = [
           controlName: 'itemName',
           fieldLabel: 'Item Name:',
           inputType: 'text',
-          // initialValue: '',
+          validators: [
+            {validatorName: 'required', validator: Validators.required, validatorErrorMessage: 'The Item Name field is required.'},
+            {validatorName: 'minlength', validator: Validators.minLength(2), validatorErrorMessage: 'The Item Name field  must be at least 2 characters long.'},
+          ],
         },
         {
           dataField: 'itemDescription',
@@ -36,7 +40,11 @@ export const ItemsFormFields: IFormField[] = [
           inputType: 'number',
           minValue: 2005,
           maxValue: 2030,
-          // initialValue: 999,
+          validators: [
+            {validatorName: 'required', validator: Validators.required, validatorErrorMessage: 'The Model Year field is required.'},
+            {validatorName: 'min', validator: Validators.min(2005), validatorErrorMessage: 'The Model Year field must be at least 2005.'},
+            {validatorName: 'max', validator: Validators.max(2030), validatorErrorMessage: 'The Model Year field must be no more than 2030.'},
+          ],
         },
         {
           dataField: 'itemCrTimestamp',
