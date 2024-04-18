@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 import { IItem } from './dataObjects/iitem';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ICategory } from './dataObjects/icatecory';
-import { ItemsFormFields } from './dataObjects/itemFormFields';
+import { ItemFormFields } from './dataObjects/itemFormFields';
 import { IFormField, IFormOptions } from './dataObjects/IFormField';
 import { DataService } from './data.service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ItemsFormFieldsService {
-  private formFields: IFormField[] = ItemsFormFields;
+export class ItemFormFieldsService {
+  private formFields: IFormField[] = ItemFormFields;
   private formFields$$ = new BehaviorSubject<IFormField[]>(this.formFields);
 
   constructor(private itemsDataServise: DataService) {

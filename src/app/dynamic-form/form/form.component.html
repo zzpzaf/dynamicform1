@@ -1,57 +1,52 @@
-
 <mat-card>
   <mat-card-content>
-  
-  <mat-toolbar class="mat-card-title" color="primary">
-      {{fornCardTitle}}
-  </mat-toolbar>  
+    <mat-toolbar class="mat-card-title" color="primary">
+      {{ fornCardTitle }}
+    </mat-toolbar>
 
-  <form
-    class="q2container"
-    [formGroup]="dynFormGroup"
-    (ngSubmit)="onFormSubmit($event)"
-  >
-    <div *ngFor="let field of formFields">
+    <form
+      class="q2container"
+      [formGroup]="dynFormGroup"
+      (ngSubmit)="onFormSubmit($event)"
+    >
+      <div *ngFor="let field of formFields">
+        <ng-container
+          applyFormControl
+          [formField]="field"
+          [formGroup]="dynFormGroup"
+        >
+        </ng-container>
 
-      <ng-container
-
-        applyFormControl
-        [formField]="field"
-        [formGroup]="dynFormGroup"
-      >
-      </ng-container>
-
-      <!--  -->
-      <div
-        *ngIf="
-          (dynFormGroup.controls[field['controlName']].touched ||
-            isFormSubmitted) &&
-          dynFormGroup.controls[field['controlName']].errors
-        "
-      >
-        <!-- This Field has errors. -->
-        <ng-container *ngFor="let validation of field['validators']">
-          <div
-            *ngIf="
-              dynFormGroup.controls[field['controlName']].errors![
-                validation.validatorName
-              ]
-            "
-          >
-            <!-- <span style="color: red; font-size: x-small">
+        <!--  -->
+        <div
+          *ngIf="
+            (dynFormGroup.controls[field['controlName']].touched ||
+              isFormSubmitted) &&
+            dynFormGroup.controls[field['controlName']].errors
+          "
+        >
+          <!-- This Field has errors. -->
+          <ng-container *ngFor="let validation of field['validators']">
+            <div
+              *ngIf="
+                dynFormGroup.controls[field['controlName']].errors![
+                  validation.validatorName
+                ]
+              "
+            >
+              <!-- <span style="color: red; font-size: x-small">
               {{ validation.validatorErrorMessage }}
             </span> -->
-            <mat-error style="font-size: x-small">
-              {{ validation.validatorErrorMessage }} 
-             </mat-error>
-          </div>
-        </ng-container>
+              <mat-error style="font-size: x-small">
+                {{ validation.validatorErrorMessage }}
+              </mat-error>
+            </div>
+          </ng-container>
+        </div>
+        <!--  -->
       </div>
-      <!--  -->
-    </div>
-  </form>
-
-</mat-card-content>
+    </form>
+  </mat-card-content>
 </mat-card>
 
 <hr />
